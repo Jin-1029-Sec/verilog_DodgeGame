@@ -31,13 +31,13 @@
 #### Output
 |No.| NAME | PIN | 備註 |
 | :---: |:---:| :---: |:---|
-|1| A~G        |PIN_51 ~ PIN_55<br>PIN_58~PIN_60                                 |七段顯示器A~G|
-|2| COM1、COM2 | PIN_72、PIN_73                                                   |七段顯示器COM|
-|3| [7:0]P     |PIN_38 ~ PIN_39<br> PIN_42 ~ PIN_44<br> PIN_46<br>PIN_49 ~ PIN_50|LED燈前8顆|
-|4| [2:0]S     | PIN_22~PIN_22                                                   | 8X8LED矩陣 S2~S0|
-|5| [7:0]R     | PIN_64 ~ PIN_71                                                 | 8X8LED矩陣 紅燈 |
-|6| [7:0]G     | PIN_135 ~ PIN_138<br>PIN_141 ~ PIN_144                            | 8X8LED矩陣 綠燈 |
-|7| [7:0]B     | PIN_124 ~ PIN_129<br>PIN_132 ~ PIN_133                          | 8X8LED矩陣 藍燈 |
+|1| A~G            |PIN_51 ~ PIN_55<br>PIN_58~PIN_60                                 |七段顯示器A~G|
+|2| COM1、COM2     | PIN_72、PIN_73                                                   |七段顯示器COM|
+|3| [7:0]b         |PIN_38 ~ PIN_39<br> PIN_42 ~ PIN_44<br> PIN_46<br>PIN_49 ~ PIN_50|LED燈前8顆|
+|4| [2:0]S         | PIN_22~PIN_22                                                   | 8X8LED矩陣 S2~S0|
+|5| [7:0]position_R| PIN_64 ~ PIN_71                                                 | 8X8LED矩陣 紅燈 |
+|6| [7:0]position_G| PIN_135 ~ PIN_138<br>PIN_141 ~ PIN_144                          | 8X8LED矩陣 綠燈 |
+|7| [7:0]position_B| PIN_124 ~ PIN_129<br>PIN_132 ~ PIN_133                          | 8X8LED矩陣 藍燈 |
 
 
 ## 💫實作影片
