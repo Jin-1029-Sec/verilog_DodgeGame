@@ -16,29 +16,30 @@
 | 1 |8x8 RGB LED 顯示器 | 顯示遊戲畫面 |
 | 2 |七段顯示器          | 顯示存活時間 |
 | 3 |LED               | 顯示目前剩餘血條|
-| 4 |4 BITS 輕觸開關    | 控制玩家左右移動|
-| 5 |8 Bits 指撥開關    | 重新開始、暫停、<br>8*8LED en(alway 1)|
+| 4 |4 BITS SW    | 控制玩家左右移動|
+| 5 |16 BITS DIPSW     | 重新開始、暫停、<br>8*8LED en(alway 1)|
 
 ## 💫Input、Output與Pin腳
 #### Input
 |No.| NAME | PIN | 備註 |
 | :---: |:---:| :---: |:---: |
 |1| clock | PIN_22 | FPGA內建clk|
-|2| left  | PIN_74 |4 BITS 輕觸開關IN1|
-|3| right | PIN_75 |4 BITS 輕觸開關IN2|
-|4| Clear | PIN_111 |8 Bits 指撥開關1.st |
-|5| pause | PIN_112 |8 Bits 指撥開關2.nd |
+|2| left  | PIN_79 |4 BITS SW IN1|
+|3| right | PIN_80 |4 BITS SW IN2|
+|4| Clear | PIN_111 |16 BITS DIPSW 1.st |
+|5| pause | PIN_112 |16 BITS DIPSW 2.nd |
 #### Output
 |No.| NAME | PIN | 備註 |
 | :---: |:---:| :---: |:---|
-|1| A~G            |PIN_51 ~ PIN_55<br>PIN_58~PIN_60                                 |七段顯示器A~G|
+|1| A~G            | PIN_51 ~ PIN_55<br>PIN_58 ~ PIN_59                                |七段顯示器A~G|
 |2| COM1、COM2     | PIN_72、PIN_73                                                   |七段顯示器COM|
-|3| [7:0]b         |PIN_38 ~ PIN_39<br> PIN_42 ~ PIN_44<br> PIN_46<br>PIN_49 ~ PIN_50|LED燈前8顆|
-|4| [2:0]S         | PIN_22~PIN_22                                                   | 8X8LED矩陣 S2~S0|
-|5| [7:0]position_R| PIN_64 ~ PIN_71                                                 | 8X8LED矩陣 紅燈 |
+|3| [0:7]b         | PIN_38 ~ PIN_39<br> PIN_42 ~ PIN_44<br> PIN_46<br>PIN_49 ~ PIN_50|LED燈前8顆|
+|4| [2:0]S         | PIN_119 ~ PIN_121                                               | 8X8LED矩陣 S2~S0|
+|5| [7:0]position_R| PIN_64 ~ PIN_71                                                  | 8X8LED矩陣 紅燈 |
 |6| [7:0]position_G| PIN_135 ~ PIN_138<br>PIN_141 ~ PIN_144                          | 8X8LED矩陣 綠燈 |
 |7| [7:0]position_B| PIN_124 ~ PIN_129<br>PIN_132 ~ PIN_133                          | 8X8LED矩陣 藍燈 |
 
-
+![image](https://github.com/Jin-1029-Sec/verilog_DodgeGame/blob/main/%E8%AA%AA%E6%98%8Eimg/pin01.png)
+![image](https://github.com/Jin-1029-Sec/verilog_DodgeGame/blob/main/%E8%AA%AA%E6%98%8Eimg/pin02.png)
 ## 💫實作影片
 
