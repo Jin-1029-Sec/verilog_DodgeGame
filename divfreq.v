@@ -73,33 +73,10 @@ module divfreq6(input CLK, output reg CLK_div);
 		end
 endmodule 
 
-//---------------黃色掉落物的--------------------------------
-module divfreq7(input CLK, output reg CLK_div); 
-	reg [24:0] Count; 
-	always @(posedge CLK) 
-		begin 
-			if(Count > 3000000) 
-				begin Count <= 25'b0; CLK_div <= ~CLK_div; end 
-			else
-				Count <= Count + 1'b1; 
-	end 
-endmodule 
-//--------------random_黃-----------------------------------
-module divfreq8(input CLK, output reg CLK_div); 
-	reg [24:0] Count; 
-	always @(posedge CLK) 
-		begin 
-			if(Count > 355555) 
-				begin	Count <= 25'b0; CLK_div <= ~CLK_div; end 
-			else 
-				Count <= Count + 1'b1; 
-		end 
-endmodule
-
 
 
 //---------計時器------------------------------------------
-module divfreq9(input CLK, output reg CLK_div);
+module divfreq7(input CLK, output reg CLK_div);
   reg [29:0] Count;
   always @(posedge CLK)
     begin
