@@ -5,10 +5,8 @@
 4. ✅會顯示目前存活的時長
 5. ✅會顯示目前的血條
 6. ✅遊戲結束或遊戲過程中可重新開始，重新開始後HP與時間重新計
-7. ⬜遊戲暫停時，畫面顯示暫停符號，並且時間暫停，~~繼續後遊戲會恢復成暫停前~~
+7. ✅遊戲暫停時，畫面顯示暫停符號，並且時間暫停，繼續後遊戲會恢復成暫停前
 8. ✅死亡後(HP歸零)畫面會顯示OVER的畫面，並且停止計時
-9. ⬜遊戲結束後會計算目前的分數，~~並將最終分數顯示於畫面~~
-10. ⬜~~玩家觸碰到掉落物時蜂鳴器會叫~~
 
 ## 💫使用的元件與功能
 | No. | 使用元件 | 功能 |
@@ -43,3 +41,4 @@
 ![image](https://github.com/Jin-1029-Sec/verilog_DodgeGame/blob/main/%E8%AA%AA%E6%98%8Eimg/pin02.png)
 ## 💫實作影片
 
+[![Watch the video](https://img.youtube.com/vi/vI_yeUGF-Jw.jpg)](https://youtu.be/vI_yeUGF-Jw?feature=shared)
