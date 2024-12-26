@@ -9,7 +9,7 @@
 8. ✅死亡後(HP歸零)畫面會顯示OVER的畫面，並且停止計時
 
 ## 💫IC
-####EP3C10E144C8
+#### EP3C10E144C8
 ![image](https://github.com/Jin-1029-Sec/verilog_DodgeGame/blob/main/%E8%AA%AA%E6%98%8Eimg/ic.jpg)
 
 
