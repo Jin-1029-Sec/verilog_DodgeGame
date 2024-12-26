@@ -16,9 +16,9 @@ module final_01(
 	wire [2:0]S3;					//x
 	reg [1:0] count;				//沒GG時(控制物、藍綠掉落物輪流SHOW)
 	reg [3:0] count2;				//GAME_OVER(8*8顯示器 8列圖案選擇)
-   reg [3:0] ti;					//有幾個已達底部的掉落物
-   reg [3:0] s;
-   reg touch;
+   	reg [3:0] ti;					//有幾個已達底部的掉落物
+   	reg [3:0] s;
+   	reg touch;
 	reg [4:0] hp;					//血條
 	reg [3:0] A_count,B_count;	//個位,十位數字
 	reg [0:3] a;					//計時器數字tmp
