@@ -1,7 +1,7 @@
 module final_01(
 	output reg [7:0]position_R, position_B, position_G, 
 	output reg [2:0]S,
-	//output reg touch, 				//是否碰到	(蜂鳴器)
+	//output reg touch,		
 	output reg A,B,C,D,E,F,G,		//計時器		(七段顯示器)
 	output reg [7:0]b,				//血條  		(LED)
 	output reg COM1,COM2,			//個位,十位	(七段顯示器)
@@ -19,7 +19,6 @@ module final_01(
    reg [3:0] ti;					//有幾個已達底部的掉落物
    reg [3:0] s;
    reg touch;
-	//reg x;
 	reg [4:0] hp;					//血條
 	reg [3:0] A_count,B_count;	//個位,十位數字
 	reg [0:3] a;					//計時器數字tmp
@@ -30,10 +29,8 @@ module final_01(
 	divfreq3 C3(CLK, CLK_div3);	 //快速切換
 	divfreq4 C4(CLK, CLK_div4);	 //綠色掉落
 	divfreq5 C5(CLK, CLK_div5);	 //藍_速度
-	divfreq6 C6(CLK, CLK_div6);	 //綠_速度
-	//divfreq7 C7(CLK, CLK_div7);	 
-	//divfreq8 C8(CLK, CLK_div8);	 
-	divfreq9 C9(CLK, CLK_div9); 	 //計時器
+	divfreq6 C6(CLK, CLK_div6);	 //綠_速度	 
+	divfreq7 C7(CLK, CLK_div7); 	 //計時器
 	
 	moveobject M1(CLK_div, Clear, right, left, p1, S1);
    fallingobject  F1(CLK_div2, CLK_div5, Clear, touch, p2, S2, get1);
@@ -44,12 +41,11 @@ module final_01(
 		touch = 0;
 		b = 8'b11111111; //血條LED顯示狀態
 		s=0;
-		//x=1;
 	end
 	
 //----------計時器--------------------------------------------------------
 //**********補充：'b二進，1'd十進，'h十六進*********************************
-	always @(posedge CLK_div9, posedge Clear)
+	always @(posedge CLK_div7, posedge Clear)
 		begin 
 			if(Clear) 	
 				begin
@@ -103,6 +99,8 @@ module final_01(
 		begin
 		   if(Clear)
 				hp <= 0;
+			else if(pause)
+				hp <= hp;
 		   else if(hp<=9)
 				hp <= hp+1;
 		end
@@ -149,17 +147,17 @@ module final_01(
 		else if(pause)
 			begin
 				count2 <= count2+1;
-				b<=8'b00000000;
+				b<=b;
 				if(count2>7)
 					count2<=0;
 				if(count2==2)
 					begin
-						position_B<=8'b00000000;
+						position_B<=8'b11000011;
 						S<=2;
 					end
 				else if(count2==4)
 					begin
-						position_B<=8'b00000000;
+						position_B<=8'b11000011;
 						S<=4;
 					end
 			end	
